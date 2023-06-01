@@ -1,14 +1,11 @@
-nums = [3,3] 
+nums = [3, 3] 
 target = 6
 
 def two_sum(arr, target):
-    for num in nums:
-        for number in nums:
-            if(num + number == target):
-                solution = []
-                solution.insert(0, nums.index(number))
-                solution.insert(0, nums.index(num))
-                return solution
+    for i in range(len(nums)):
+        for y in range(len(nums)):
+            if(nums[i] + nums[y] == target and i != y):
+                return [nums[i], nums[y]]
 
 print(two_sum(nums, target))
 
